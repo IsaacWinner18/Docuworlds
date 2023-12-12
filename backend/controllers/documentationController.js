@@ -27,10 +27,10 @@ const getDocu = async (req, res) => {
 //create new workout
 
 const createDocu = async (req, res) => {
-  const { title, url } = req.body;
+  const { title, bio, url } = req.body;
 
   try {
-    const documentation = await Documentation.create({ title, url });
+    const documentation = await Documentation.create({ title, bio, url });
     res.status(200).json(documentation);
   } catch (error) {
     res.status(400).json({ error: error.message });

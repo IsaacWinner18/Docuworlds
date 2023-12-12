@@ -8,6 +8,10 @@ const DocuSchema = new Schema(
       type: String,
       required: true,
     },
+    bio: {
+      type: String,
+      required: true,
+    },
     url: {
       type: String,
       required: true,

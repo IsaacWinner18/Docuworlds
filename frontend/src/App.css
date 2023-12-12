@@ -1,0 +1,19 @@
+@media screen and (min-width: 1024px) {
+      .bar {
+           display: none;
+            }   
+}
+body {
+      --tw-bg-opacity: 1;
+      background-color: rgb(23 37 84 / var(--tw-bg-opacity));
+}
+/* Add this to your existing CSS file */
+.overlay {
+     position: fixed;
+     top: 0;
+      left: 0;
+      width: 80%;
+    }
+    
+
+   
