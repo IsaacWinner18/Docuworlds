@@ -73,7 +73,8 @@ useEffect(() => {
   useEffect(() => {
     const fetchDocu = async () => {
       try {
-        const response = await fetch("http://localhost:4000/api/docu");
+        const response = await fetch("https://docuarea.vercel.app/");
+        // https://docuarea.vercel.app/
         if (response.ok) {
           const json = await response.json();
           setDocuments(json);
@@ -106,7 +107,7 @@ useEffect(() => {
             </div>
 
             <div className="pt-10 cursor-pointer">
-              <ul className="text-purple-300 font-bold text-xl pb-16 " onClick={Menufunc}>
+              <ul className="text-purple-300 font-bold text-xl pb-16 " >
                 <li className="pb-8">
                   {" "}
                   <span onClick={frontendFun}>
@@ -124,38 +125,39 @@ useEffect(() => {
                   >
                     <li
                       className="hover:text-violet-600"
-                      onClick={() => handleSelectTab("HTML")}
+                      onClick={() => { handleSelectTab("HTML"); Menufunc()}}
+                      // onClick={Menufunc}
                     >
                       {" "}
                       HTML{" "}
                     </li>
                     <li
                       className="hover:text-violet-600"
-                      onClick={() => handleSelectTab("CSS")}
+                      onClick={() => { Menufunc(); handleSelectTab("CSS")}}
                     >
                       CSS
                     </li>
                     <li
                       className="hover:text-violet-600"
-                      onClick={() => handleSelectTab("JS")}
+                      onClick={() => { Menufunc(); handleSelectTab("JS")}}
                     >
                       JAVASCRIPT
                     </li>
                     <li
                       className="hover:text-violet-600"
-                      onClick={() => handleSelectTab("REACT")}
+                      onClick={() => { Menufunc(); handleSelectTab("REACT")}}
                     >
                       REACT
                     </li>
                     <li
                       className="hover:text-violet-600"
-                      onClick={() => handleSelectTab("TAILWIND")}
+                      onClick={() => { Menufunc(); handleSelectTab("TAILWIND")}}
                     >
                       TAILWIND
                     </li>
                     <li
                       className="hover:text-violet-600"
-                      onClick={() => handleSelectTab("MATERIAL")}
+                      onClick={() => { Menufunc(); handleSelectTab("MATERIAL")}}
                     >
                       MATERIAL UI
                     </li>
